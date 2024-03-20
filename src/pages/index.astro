@@ -177,12 +177,26 @@ const isRobertWorking = (() => {
       h1 {
         font-size: 90px;
       }
+
+      .fade-in {
+        animation: fadeIn 5s;
+      }
+      @keyframes fadeIn {
+        0% {
+          filter: blur(50px);
+          opacity: 0;
+        }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="bg"></div>
     <main>
-      <h1 class="gradient-text">{isRobertWorking}</h1>
+      <h1 class="gradient-text fade-in">{isRobertWorking}</h1>
     </main>
   </body>
 </html>
