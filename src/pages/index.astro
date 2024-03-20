@@ -1,5 +1,14 @@
 ---
-
+const isRobertWorking = (() => {
+  const random = Math.random();
+  if (random < 0.8) {
+    return "No";
+  }
+  if (random < 0.9) {
+    return "Yes";
+  }
+  return "Maybe";
+})();
 ---
 
 <html lang="en">
@@ -173,7 +182,7 @@
   <body>
     <div class="bg"></div>
     <main>
-      <h1 class="gradient-text">Maybe</h1>
+      <h1 class="gradient-text">{isRobertWorking}</h1>
     </main>
   </body>
 </html>
